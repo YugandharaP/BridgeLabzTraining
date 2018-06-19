@@ -1,0 +1,43 @@
+[ {
+  "doctorName" : "yuga",
+  "doctorId" : 493,
+  "specialization" : "brain",
+  "available" : "AM",
+  "patientCount" : 0
+}, {
+  "doctorName" : "Tanmay",
+  "doctorId" : 856,
+  "specialization" : "brain",
+  "available" : "PM",
+  "patientCount" : 0
+}, {
+  "doctorName" : "Pritam",
+  "doctorId" : 207,
+  "specialization" : "EyesSpecialist",
+  "available" : "Both",
+  "patientCount" : 0
+}, {
+  "doctorName" : "Ritesh",
+  "doctorId" : 709,
+  "specialization" : "Heart",
+  "available" : "PM",
+  "patientCount" : 0
+}, {
+  "doctorName" : "Chaitra",
+  "doctorId" : 914,
+  "specialization" : "Heart",
+  "available" : "PM",
+  "patientCount" : 0
+}, {
+  "doctorName" : "Vishal",
+  "doctorId" : 593,
+  "specialization" : "Orthopedic",
+  "available" : "AM",
+  "patientCount" : 1
+}, {
+  "doctorName" : "Navin",
+  "doctorId" : 160,
+  "specialization" : "orthopedic",
+  "available" : "PM",
+  "patientCount" : 0
+} ]
