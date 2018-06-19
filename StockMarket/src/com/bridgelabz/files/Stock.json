@@ -1,0 +1,17 @@
+[ {
+  "companyName" : "BridgeLabz",
+  "sharePrice" : 100,
+  "numberOfShares" : 42
+}, {
+  "companyName" : "BSNL",
+  "sharePrice" : 20,
+  "numberOfShares" : 20
+}, {
+  "companyName" : "TaTa",
+  "sharePrice" : 50,
+  "numberOfShares" : 90
+}, {
+  "companyName" : "Infosys",
+  "sharePrice" : 40,
+  "numberOfShares" : 53
+} ]

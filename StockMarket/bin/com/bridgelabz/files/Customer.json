@@ -1,0 +1,11 @@
+[ {
+  "customerName" : "yuga",
+  "mobileNumber" : 9423956577,
+  "amount" : 10200,
+  "numberOfShares" : 15
+}, {
+  "customerName" : "vishal",
+  "mobileNumber" : 8080808080,
+  "amount" : 19600,
+  "numberOfShares" : 15
+} ]
