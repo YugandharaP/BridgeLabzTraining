@@ -1,0 +1,25 @@
+[ {
+  "firstName" : "yuga",
+  "lastName" : "Paranjape",
+  "address" : "vashi",
+  "city" : "mumbai",
+  "state" : "maharashtra",
+  "zipCode" : "300012",
+  "phoneNum" : 9876543210
+}, {
+  "firstName" : "bijaya",
+  "lastName" : "senapati",
+  "address" : "parel",
+  "city" : "alibag",
+  "state" : "orissa",
+  "zipCode" : "300013",
+  "phoneNum" : 9087654321
+}, {
+  "firstName" : "vidya",
+  "lastName" : "paranjape",
+  "address" : "parel",
+  "city" : "thane",
+  "state" : "maharashtra",
+  "zipCode" : "300013",
+  "phoneNum" : 9807654321
+} ]

@@ -1,0 +1,25 @@
+[ {
+  "firstName" : "sweta",
+  "lastName" : "nayak",
+  "address" : "vashi",
+  "city" : "pune",
+  "state" : "gujrat",
+  "zipCode" : "45678",
+  "phoneNum" : 458787662
+}, {
+  "firstName" : "rahul",
+  "lastName" : "pradhan",
+  "address" : "nh",
+  "city" : "jj",
+  "state" : "dff",
+  "zipCode" : "78",
+  "phoneNum" : 765543
+}, {
+  "firstName" : "yuga",
+  "lastName" : "nayak",
+  "address" : "vashi",
+  "city" : "pune",
+  "state" : "surat",
+  "zipCode" : "78",
+  "phoneNum" : 8767553
+} ]

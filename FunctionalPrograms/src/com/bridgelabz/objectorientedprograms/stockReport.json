@@ -1,0 +1,19 @@
+{
+	"stockList": [
+		{
+			"stockName": "VodaFone",
+			"shareNumber": 3,
+			"stockPrice": 100
+		},
+		{
+			"stockName": "BSNL",
+			"shareNumber": 3,
+			"stockPrice": 50
+		},
+		{
+			"stockName": "JIO",
+			"shareNumber": 5,
+			"stockPrice": 20
+		}
+	]
+}

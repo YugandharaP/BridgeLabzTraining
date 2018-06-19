@@ -1,0 +1,20 @@
+{
+	"VodaFone": {
+		"Company_Name": "VodaFone",
+		"Stock_Symbol" : "$",
+		"NoOfShares": 10,
+		"sharePrice": 1000
+	},
+	"BSNL": {
+		"Company_Name": "BSNL",
+		"Stock_Symbol" : "@",
+		"NoOfShares": 20,
+		"sharePrice": 1000
+	},
+	"JIO": {
+		"Company_Name": "JIO",
+		"Stock_Symbol" : "#",
+		"NoOfShares": 5,
+		"sharePrice": 1000
+	}
+}

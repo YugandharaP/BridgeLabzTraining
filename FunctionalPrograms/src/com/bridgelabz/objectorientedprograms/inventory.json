@@ -1,0 +1,21 @@
+{
+  "listRice" : [ {
+    "name" : "basamati",
+    "weight" : 30,
+    "price" : 5
+  }, {
+    "name" : "desi",
+    "weight" : 50,
+    "price" : 4
+  } ],
+  "listPulse" : [ {
+    "name" : "toor",
+    "weight" : 30,
+    "price" : 2
+  } ],
+  "listWheat" : [ {
+    "name" : "patanjali",
+    "weight" : 5,
+    "price" : 50
+  } ]
+}

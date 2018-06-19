@@ -1,0 +1,41 @@
+[ {
+  "firstName" : "bijaya",
+  "lastName" : "senapati",
+  "address" : "thane",
+  "city" : "thane",
+  "state" : "zarakhnd",
+  "zipCode" : "34000",
+  "phoneNum" : 9087654321
+}, {
+  "firstName" : "yuga",
+  "lastName" : "paranjape",
+  "address" : "vashi",
+  "city" : "sawantwadi",
+  "state" : "maharashtra",
+  "zipCode" : "34000",
+  "phoneNum" : 876543210
+}, {
+  "firstName" : "vidya",
+  "lastName" : "paranjape",
+  "address" : "bandra",
+  "city" : "mumbai",
+  "state" : "maharashtra",
+  "zipCode" : "34500",
+  "phoneNum" : 90876543
+}, {
+  "firstName" : "navya",
+  "lastName" : "deshmukh",
+  "address" : "pimpari",
+  "city" : "chinchwad",
+  "state" : "pune",
+  "zipCode" : "45004",
+  "phoneNum" : 980768543
+}, {
+  "firstName" : "natasha",
+  "lastName" : "shinde",
+  "address" : "barabanki",
+  "city" : "lakhnau",
+  "state" : "UP",
+  "zipCode" : "45004",
+  "phoneNum" : 787654343
+} ]

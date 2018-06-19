@@ -1,0 +1,16 @@
+{
+  "customerArray" : [ {
+    "userName" : "capegemini",
+    "phoneNumber" : 9876543210,
+    "accountNumber" : 7850,
+    "shareNumber" : 4,
+    "sharePrice" : 4000,
+    "companySyambol" : "$"
+  } ],
+  "companyArray" : [ {
+    "stock_Symbol" : null,
+    "sharePrice" : 0,
+    "dateAndTime" : "05/06/2018 19:05:31",
+    "noOfShares" : 0
+  } ]
+}
