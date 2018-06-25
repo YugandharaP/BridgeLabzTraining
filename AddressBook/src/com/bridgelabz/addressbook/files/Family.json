@@ -1,0 +1,17 @@
+[ {
+  "firstName" : "yuga",
+  "lastName" : "paranjape",
+  "address" : "vashi",
+  "city" : "mumbai",
+  "state" : "maharashtra",
+  "zipCode" : "90897",
+  "phoneNum" : 9423956577
+}, {
+  "firstName" : "Bijaya",
+  "lastName" : "Senapati",
+  "address" : "Parel",
+  "city" : "Alibag",
+  "state" : "Goa",
+  "zipCode" : "23456",
+  "phoneNum" : 9090909090
+} ]
