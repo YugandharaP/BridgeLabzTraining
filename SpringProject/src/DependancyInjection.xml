@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	<!-- bean definitions here -->
+	<bean id="simcard" class="com.bridgelabz.model.SimCard">
+		<constructor-arg value="BSNL" />
+		<constructor-arg value="7507287704" />
+	</bean>
+	<!-- <bean id="mobile" class="com.bridgelabz.model.Mobile"> <constructor-arg 
+		value="101" /> <constructor-arg value="SamSung" /> <constructor-arg value="Black" 
+		/> <constructor-arg ref="simcard" /> </bean> -->
+		
+	<bean id="mobile" class="com.bridgelabz.model.Mobile">
+		<property name="mobileId" value="101" />
+		<property name="mobileBrand" value="SamSung" />
+		<property name="mobileColor" value="Black" />
+		<property name="SimCard" ref="simcard" />
+	</bean>
+</beans>
