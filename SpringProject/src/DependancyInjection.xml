@@ -5,7 +5,7 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 	<!-- bean definitions here -->
-	<bean id="simcard" class="com.bridgelabz.model.SimCard">
+	<bean id="simcard" class="com.bridgelabz.DIUsingConstructors.SimCardBean">
 		<constructor-arg value="BSNL" />
 		<constructor-arg value="7507287704" />
 	</bean>
@@ -13,10 +13,10 @@
 		value="101" /> <constructor-arg value="SamSung" /> <constructor-arg value="Black" 
 		/> <constructor-arg ref="simcard" /> </bean> -->
 		
-	<bean id="mobile" class="com.bridgelabz.model.Mobile">
+	<bean id="mobile" class="com.bridgelabz.DIUsingConstructors.MobileBean">
 		<property name="mobileId" value="101" />
 		<property name="mobileBrand" value="SamSung" />
 		<property name="mobileColor" value="Black" />
-		<property name="SimCard" ref="simcard" />
+		<property name="SimCardBean" ref="simcard" />
 	</bean>
 </beans>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	<!-- bean definitions here -->
+	
+	<bean id="patient" class="com.bridgelabz.autowiring.PatientBean">
+		<property name="pId" value="420" />
+		<property name="pName" value="Radha" />
+		<property name="mobileNum" value="9876098655" />
+		<property name="address" value="Kurla"></property>
+	</bean>
+	<!-- autowiring using byName(The dependent bean id is same as the attribute 
+		declare in the depends on bean class) 
+		<bean id="hospital" class="com.bridgelabz.autowiring.HospitalBean" autowire="byName">
+		<property name="hId" value="1200" /> 
+		<property name="hName" 
+		value="Sanjivani Hospital" /> <property name="location" value="Dadar" /> 
+		-->
+	<!-- for "byType" checks the dependent object/bean in the beanfactory. if it is there it will inject it . -->
+		<bean id="hospital" class="com.bridgelabz.autowiring.HospitalBean" autowire="byType"> 
+		<property name="hId" value="1200" />
+		<property name="hName" value="Sanjivani Hospital" /> 
+		<property name="location" value="Dadar" /> 
+		</bean>
+
+	<bean id="patient1" class="com.bridgelabz.autowiring.PatientBean"> 
+		<property name="pId" value="420" /> 
+		<property name="pName" value="Radha" /> 
+		<property name="mobileNum" value="9876098655" />
+		<property name="address" value="Kurla"></property> 
+		</bean>
+		
+<!--for(autowire="constructor we need to used parameterized constructor with an argument of dependent object")
+ -->	<!-- <bean id="hospital" class="com.bridgelabz.autowiring.HospitalBean" autowire="constructor"> 
+		<property name="hId" value="1200" />
+		<property name="hName" value="Sanjivani Hospital" /> 
+		<property name="location" value="Dadar" /> 
+	</bean> -->
+</beans>
