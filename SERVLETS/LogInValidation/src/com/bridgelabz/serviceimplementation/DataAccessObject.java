@@ -1,9 +1,9 @@
 package com.bridgelabz.serviceimplementation;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -15,9 +15,10 @@ import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 public class DataAccessObject {
 	static final String FILEPATH = "/home/adminsitrator/Documents/Program/LogInValidation/src/com/bridgelabz/files/DBDetails.properties";
-	Connection con = null;
-	Statement stmt = null;
-	ResultSet res=null;
+	public Connection con = null;
+	public Statement stmt = null;
+	public PreparedStatement pst=null;
+	public ResultSet res=null;
 	
 	DataSource datasource = null;
 	/**
@@ -37,8 +38,9 @@ public class DataAccessObject {
 	 * To closed costly connection
 	 */
 	public void closeCostlyConnections() {
-			if (stmt != null || con != null) {
+			if (stmt != null || con != null||pst!=null) {
 				try {
+					pst.close();
 					stmt.close();
 					con.close();
 				} catch (SQLException e) {
