@@ -1,4 +1,4 @@
-package com.bridgelabz.model;
+package com.bridgelabz.DIUsingSetters;
 
 public class Employee {
 	 int eid;

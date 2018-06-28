@@ -1,5 +1,7 @@
 package com.bridgelabz.DIUsingConstructors;
 
+import org.springframework.beans.factory.annotation.Required;
+
 public class MobileBean {
 	int mobileId;
 	String mobileBrand;

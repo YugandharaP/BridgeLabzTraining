@@ -8,6 +8,10 @@ public class AnnotationTestClass {
 		ApplicationContext context = new ClassPathXmlApplicationContext("Annotations.xml");
 		CarBean car = context.getBean("carBean", CarBean.class);
 		car.startCar();
-		System.out.println(car);
+		System.out.println("@Scope(value=\"prototype\")used here "+car.hashCode());
+		System.out.println();
+		CarBean car1 = context.getBean("carBean", CarBean.class);
+		car1.startCar();
+		System.out.println("@Scope(value=\"prototype\")used here "+car1.hashCode());
 	}
 }

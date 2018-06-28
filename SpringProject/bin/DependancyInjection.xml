@@ -15,7 +15,7 @@
 		
 	<bean id="mobile" class="com.bridgelabz.DIUsingConstructors.MobileBean">
 		<property name="mobileId" value="101" />
-		<property name="mobileBrand" value="SamSung" />
+		<!-- <property name="mobileBrand" value="msung" /> -->
 		<property name="mobileColor" value="Black" />
 		<property name="SimCardBean" ref="simcard" />
 	</bean>

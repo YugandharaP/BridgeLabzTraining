@@ -1,4 +1,4 @@
-package com.bridgelabz.controller;
+package com.bridgelabz.DIUsingSetters;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
