@@ -1,20 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
-  <display-name>LogInValidation</display-name>
-  <welcome-file-list>
-    <welcome-file>SigIn.jsp</welcome-file>
-  </welcome-file-list>
- <!--  <context-param>
-  <param-name>title</param-name>
-  <param-value>Welcome To BridgeLabz</param-value>
-  </context-param> -->
-  
-  <servlet-mapping>
-  <servlet-name>loginPage</servlet-name>
-  <url-pattern>/signin</url-pattern>
-  </servlet-mapping>
-  <servlet>
-  <servlet-name>loginPage</servlet-name>
-  <servlet-class>com.bridgelabz.serviceimplementation.LogInPage</servlet-class>
-  </servlet>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>LogInValidation</display-name>
+	<welcome-file-list>
+		<welcome-file>HomePage.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet-mapping>
+		<servlet-name>preLogInServlet</servlet-name>
+		<url-pattern>/LogIn</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>preLogInServlet</servlet-name>
+		<servlet-class>com.bridgelabz.controller.PreLogInServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>loginSevlet</servlet-name>
+		<url-pattern>/signin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>loginSevlet</servlet-name>
+		<servlet-class>com.bridgelabz.controller.LogInServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>preSignUpServlet</servlet-name>
+		<url-pattern>/signUp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>preSignUpServlet</servlet-name>
+		<servlet-class>com.bridgelabz.controller.PreSignUpServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>signupSevlet</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>signupSevlet</servlet-name>
+		<servlet-class>com.bridgelabz.controller.SignUpServlet</servlet-class>
+	</servlet>
+	
+	
+	
+	
+	
+	
+	
 </web-app>
