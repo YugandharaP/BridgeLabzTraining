@@ -13,11 +13,12 @@
 				<legend>
 					<h3 style="color: yellow;">SignIn</h3>
 				</legend>
-				Registration Number : <input type="email" name="username">&nbsp;&nbsp;
-				Password : <input type="password" name="password">
+				UserName : <input type="email" name="username">&nbsp;&nbsp;
+				Password : <input type="password" name="password"
+					pattern="((?=.*\d)(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[@#$%^&*()!]).{6,20})"
+					title="must Contain atleast( one digit[0-9],one aplha[a-z] and [A-Z],one specialCharacter )">
 				<h4>
-					<input type="submit" value="signIn"></input>&nbsp; 
-					<input type="submit" value="SignUp"/>
+					<input type="submit" value="signIn" />&nbsp;
 				</h4>
 				<h4>
 					<a href="ForgetPassword.html">Forget password</a>

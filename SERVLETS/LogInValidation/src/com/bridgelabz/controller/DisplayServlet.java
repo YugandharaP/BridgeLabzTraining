@@ -27,7 +27,7 @@ public class DisplayServlet extends HttpServlet {
 		req.setAttribute("mobile", mobile);
 		req.setAttribute("email", username);
 		try {
-			resp.sendRedirect("Display.jsp");
+			resp.sendRedirect("");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

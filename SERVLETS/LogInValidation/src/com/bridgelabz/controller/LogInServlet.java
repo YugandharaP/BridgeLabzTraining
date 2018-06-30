@@ -2,6 +2,8 @@ package com.bridgelabz.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -26,37 +28,30 @@ public class LogInServlet extends HttpServlet {
 
 		String select = "select * from Students where Email = ? and Password = ?";
 		System.out.println("second table : " + select);
-		// connection create
+		
 		object.connectionPoolFactory();
 		try {
+			System.out.println("enter into try");
 			object.pst = object.con.prepareStatement(select);
 			object.pst.setString(1, username);
 			object.pst.setString(2, password);
 			object.res = object.pst.executeQuery();
 			System.out.println("res1" + object.res);
 			if (object.res.next()) {
-				/*
-				 * req.setAttribute("serialNum", object.res.getInt("SerialNum"));
-				 * req.setAttribute("fullName", object.res.getString("FullName"));
-				 * req.setAttribute("mobile", object.res.getLong("Mobile"));
-				 * req.setAttribute("username", username); req.setAttribute("password",
-				 * password); System.out.println("set attributes");
-				 */
+				HttpSession session = req.getSession(true);
+				int serialNum = object.res.getInt(1);
 				String fullName = object.res.getString(2);
-				HttpSession session = req.getSession();
+				long mobile = object.res.getLong(3);
+				session.setAttribute("message", "you are successfully login");
+				session.setAttribute("serialNum", serialNum);
+				session.setAttribute("fullName", fullName);
+				session.setAttribute("mobile", mobile);
 				session.setAttribute("username", username);
-				session.setAttribute("password", password);
-
-				Cookie cookie = new Cookie("fullName", fullName);
-				cookie.setMaxAge(60 * 60 * 24);
-				resp.addCookie(cookie);
-				System.out.println("getting the cookie response");
-				resp.sendRedirect("Display.jsp");
+				resp.sendRedirect("SuccessFullLogIn");
 				System.out.println("after dispature servlet");
-
 			} else {
 				System.out.println("Not Valid user");
-
+				resp.sendRedirect("UnsuccessfulLogIn");
 			}
 		} catch (SQLException e1) {
 			e1.printStackTrace();

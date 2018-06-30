@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.bridgelabz.dao.DataAccessObject;
 
@@ -15,6 +16,7 @@ public class SignUpServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		HttpSession session = req.getSession(true);
 		String fname = req.getParameter("fname");
 		String lname= req.getParameter("lname");
 		long mobile=Long.parseLong(req.getParameter("mobile"));
@@ -34,14 +36,14 @@ public class SignUpServlet extends HttpServlet {
 				object.pst.setString(3, email);
 				object.pst.setString(4, password);
 				object.pst.executeUpdate();
-				resp.sendRedirect("Successfull.jsp");
+				session.setAttribute("message", "Hii "+fullName+" You are successfully register");
+				resp.sendRedirect("SuccessfullRegister");
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-			
 		}
 		else {
-			System.out.println("Oopps Error! Some Application Issues");
+			System.out.println("Password Not Matched!");
 		}
 		
 	}

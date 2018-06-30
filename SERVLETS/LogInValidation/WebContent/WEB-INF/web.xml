@@ -46,11 +46,61 @@
 		<servlet-name>signupSevlet</servlet-name>
 		<servlet-class>com.bridgelabz.controller.SignUpServlet</servlet-class>
 	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UnsuccessfulLogInServlet</servlet-name>
+		<url-pattern>/UnsuccessfulLogIn</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UnsuccessfulLogInServlet</servlet-name>
+		<servlet-class>com.bridgelabz.controller.UnsuccessfulLogInServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SuccessFullLogInServlet</servlet-name>
+		<url-pattern>/SuccessFullLogIn</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>SuccessFullLogInServlet</servlet-name>
+		<servlet-class>com.bridgelabz.controller.SuccessFullLogIn</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>SuccessfullRegisterServlet</servlet-name>
+		<url-pattern>/SuccessfullRegister</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>SuccessfullRegisterServlet</servlet-name>
+		<servlet-class>com.bridgelabz.controller.SuccessFullRegister</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LogOutSuccessServlet</servlet-name>
+		<url-pattern>/LogoutSuccess</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>LogOutSuccessServlet</servlet-name>
+		<servlet-class>com.bridgelabz.controller.LogOutSuccess</servlet-class>
+	</servlet>
 	
+	<servlet-mapping>
+		<servlet-name>SignInFromLogInServlet</servlet-name>
+		<url-pattern>/signupfromlogin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>SignInFromLogInServlet</servlet-name>
+		<servlet-class>com.bridgelabz.controller.SignUpServlet</servlet-class>
+	</servlet>
 	
-	
-	
-	
-	
-	
+	<servlet-mapping>
+		<servlet-name>LogInAfterRegistration</servlet-name>
+		<url-pattern>/SignInPage</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>LogInAfterRegistration</servlet-name>
+		<servlet-class>com.bridgelabz.controller.PreLogInServlet</servlet-class>
+	</servlet>
+
 </web-app>

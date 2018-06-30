@@ -30,7 +30,7 @@ div.ex {
 				
 				<tr>
 					<td>Mobile-Number</td>
-					<td><input type="number" name="mobile"maxlength="10" required placeholder></input></td>
+					<td><input type="number" name="mobile"maxlength="10" title="only 10 digits" required placeholder ></input></td>
 				</tr>
 				
 				<tr>
@@ -39,11 +39,11 @@ div.ex {
 				</tr>
 				<tr>
 					<td>Password</td>
-					<td><input type="password" name="password" required placeholder="******"></td>
+					<td><input type="password" name="password" required placeholder="******" pattern="((?=.*\d)(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[@#$%^&*()!]).{6,20})" title="must Contain atleast( one digit[0-9],one aplha[a-z] and [A-Z],one specialCharacter )"></td>
 				</tr>	
 				<tr>
 					<td>Re-Type-Password</td>
-					<td><input type="password" name="repassword" required placeholder></td>
+					<td><input type="password" name="repassword" title="Same as above password"required placeholder ></td>
 				</tr>	
 		</table>
 		<br><input type="submit" value="Register">
