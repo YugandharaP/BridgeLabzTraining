@@ -1,6 +1,7 @@
 package com.bridgelabz.controller;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.bridgelabz.dao.DataAccessObject;
+import com.bridgelabz.model.UserBean;
 
 /**
  * @author yuga
@@ -20,15 +22,23 @@ import com.bridgelabz.dao.DataAccessObject;
 public class LogInServlet extends HttpServlet {
 	private static final long serialVersionUID = -7696017094585463102L;
 
+	static HttpSession session = null;
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		DataAccessObject object = new DataAccessObject();
+		UserBean bean = new UserBean();
+		if (session.isNew()) {
+			session = req.getSession(true);
+		}
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
+		bean.setEmail(username);
+		bean.setPassword(password);
 
 		String select = "select * from Students where Email = ? and Password = ?";
 		System.out.println("second table : " + select);
-		
+
 		object.connectionPoolFactory();
 		try {
 			System.out.println("enter into try");
@@ -38,7 +48,7 @@ public class LogInServlet extends HttpServlet {
 			object.res = object.pst.executeQuery();
 			System.out.println("res1" + object.res);
 			if (object.res.next()) {
-				HttpSession session = req.getSession(true);
+				//session = req.getSession(true);
 				int serialNum = object.res.getInt(1);
 				String fullName = object.res.getString(2);
 				long mobile = object.res.getLong(3);

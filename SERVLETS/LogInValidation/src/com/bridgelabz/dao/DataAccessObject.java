@@ -11,21 +11,23 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
+import com.bridgelabz.model.UserBean;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 public class DataAccessObject {
 	static final String FILEPATH = "/home/adminsitrator/Documents/Program/LogInValidation/src/com/bridgelabz/files/DBDetails.properties";
 	public Connection con = null;
 	public Statement stmt = null;
-	public PreparedStatement pst=null;
-	public ResultSet res=null;
-	
+	public PreparedStatement pst = null;
+	public ResultSet res = null;
+
 	DataSource datasource = null;
+
 	/**
 	 * To establish a connection using connection pool concept
 	 */
 	public void connectionPoolFactory() {
-		datasource=getMySQLDataSource();
+		datasource = getMySQLDataSource();
 		try {
 			con = datasource.getConnection();
 			stmt = con.createStatement();
@@ -33,26 +35,28 @@ public class DataAccessObject {
 			System.out.println("Connection issue occured");
 		}
 	}
-	
+
 	/**
 	 * To closed costly connection
 	 */
 	public void closeCostlyConnections() {
-			if (stmt != null || con != null||pst!=null) {
-				try {
-					pst.close();
-					stmt.close();
-					con.close();
-				} catch (SQLException e) {
-					System.out.println("Costly resourses not close properly");
-				}
+		if (stmt != null || con != null || pst != null) {
+			try {
+				pst.close();
+				stmt.close();
+				con.close();
+			} catch (SQLException e) {
+				System.out.println("Costly resourses not close properly");
 			}
+		}
 	}
 
-	/**To fetch user name,password ,url of specific database
+	/**
+	 * To fetch user name,password ,url of specific database
+	 * 
 	 * @return mysql datasource object
 	 */
-	public  DataSource getMySQLDataSource() {
+	public DataSource getMySQLDataSource() {
 		Properties props = new Properties();
 		FileInputStream file = null;
 		// only for mysql database

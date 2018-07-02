@@ -84,7 +84,7 @@
 		<servlet-name>LogOutSuccessServlet</servlet-name>
 		<servlet-class>com.bridgelabz.controller.LogOutSuccess</servlet-class>
 	</servlet>
-	
+
 	<servlet-mapping>
 		<servlet-name>SignInFromLogInServlet</servlet-name>
 		<url-pattern>/signupfromlogin</url-pattern>
@@ -93,7 +93,7 @@
 		<servlet-name>SignInFromLogInServlet</servlet-name>
 		<servlet-class>com.bridgelabz.controller.SignUpServlet</servlet-class>
 	</servlet>
-	
+
 	<servlet-mapping>
 		<servlet-name>LogInAfterRegistration</servlet-name>
 		<url-pattern>/SignInPage</url-pattern>
@@ -102,5 +102,30 @@
 		<servlet-name>LogInAfterRegistration</servlet-name>
 		<servlet-class>com.bridgelabz.controller.PreLogInServlet</servlet-class>
 	</servlet>
+
+
+	<filter-mapping>
+		<filter-name>SignUpServlet</filter-name>
+		<url-pattern>/register</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>SignUpServlet</filter-name>
+		<filter-class>com.bridgelabz.filter.ValidationFilter</filter-class>
+	</filter>
+
+	<servlet-mapping>
+		<servlet-name>UnsuccessFullRegisterServlet</servlet-name>
+		<url-pattern>/UnsuccessFullRegister</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UnsuccessFullRegisterServlet</servlet-name>
+		<servlet-class>com.bridgelabz.controller.UnsuccessfullRegisterSevlet</servlet-class>
+	</servlet>
+	
+	<listener>
+ <description>Session Listener Example</description>
+ <listener-class>com.bridgelabz.listener.MyHttpSessionListener</listener-class>
+</listener>
 
 </web-app>

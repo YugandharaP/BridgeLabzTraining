@@ -7,19 +7,20 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-public class LogOutSuccess extends HttpServlet {
+public class UnsuccessfullRegisterSevlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("enterd into logout page");
-		if (req.getParameter("LogOut") != null) {
-			LogInServlet.session.invalidate();
-	
-			RequestDispatcher dispatcher = req.getRequestDispatcher("HomePage.jsp");
-			dispatcher.forward(req, resp);
-		}
+		System.out.println("FilterSignUpFailed");
+		RequestDispatcher dispature = req.getRequestDispatcher("FilterSignUpFailed.jsp");
+		dispature.forward(req, resp);
 	}
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		doGet(req, resp);
+		//req.getRequestDispatcher("SignUp.jsp").include(req, resp);
+	}
+
 }

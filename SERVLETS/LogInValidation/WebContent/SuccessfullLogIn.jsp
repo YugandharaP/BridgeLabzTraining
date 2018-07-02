@@ -38,7 +38,7 @@ div.ex {
 		<br>
 		<br>
 		<form action="LogoutSuccess" method="get">
-			<input type="submit" value="LogOut">
+			<input type="submit" value="LogOut" name="LogOut">
 		</form>
 		
 	</center>
