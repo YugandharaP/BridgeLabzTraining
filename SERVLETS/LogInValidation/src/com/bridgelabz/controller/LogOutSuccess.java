@@ -15,9 +15,9 @@ public class LogOutSuccess extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("enterd into logout page");
+		HttpSession session = req.getSession();
 		if (req.getParameter("LogOut") != null) {
-			LogInServlet.session.invalidate();
-	
+			session.invalidate();
 			RequestDispatcher dispatcher = req.getRequestDispatcher("HomePage.jsp");
 			dispatcher.forward(req, resp);
 		}

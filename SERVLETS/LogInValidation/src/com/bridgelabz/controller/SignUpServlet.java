@@ -14,13 +14,11 @@ import com.bridgelabz.model.UserBean;
 
 public class SignUpServlet extends HttpServlet {
 	private static final long serialVersionUID = 917826855031812665L;
-	static HttpSession session = null;
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		if (session.isNew()) {
-			session = req.getSession(true);
-		}
+		HttpSession session = session = req.getSession(true);
+		session.setMaxInactiveInterval(60);
 		UserBean bean = new UserBean();
 		String fname = req.getParameter("fname");
 		String lname = req.getParameter("lname");

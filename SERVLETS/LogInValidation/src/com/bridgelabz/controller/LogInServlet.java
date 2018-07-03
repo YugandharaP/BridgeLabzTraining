@@ -1,18 +1,17 @@
 package com.bridgelabz.controller;
 
 import java.io.IOException;
-import java.sql.Date;
 import java.sql.SQLException;
 
-import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.bridgelabz.dao.DataAccessObject;
+import com.bridgelabz.listener.MyHttpSessionListener;
 import com.bridgelabz.model.UserBean;
 
 /**
@@ -22,33 +21,33 @@ import com.bridgelabz.model.UserBean;
 public class LogInServlet extends HttpServlet {
 	private static final long serialVersionUID = -7696017094585463102L;
 
-	static HttpSession session = null;
-
+	@SuppressWarnings("null")
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		DataAccessObject object = new DataAccessObject();
 		UserBean bean = new UserBean();
-		if (session.isNew()) {
-			session = req.getSession(true);
-		}
+
+		ServletContext context = req.getServletContext();
+		MyHttpSessionListener.totalUserVisited++;
+		context.setAttribute("totalUserVisited", +MyHttpSessionListener.totalUserVisited);
+		
+		HttpSession session = session = req.getSession(true);
+		session.setMaxInactiveInterval(60);
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 		bean.setEmail(username);
 		bean.setPassword(password);
 
 		String select = "select * from Students where Email = ? and Password = ?";
-		System.out.println("second table : " + select);
 
 		object.connectionPoolFactory();
 		try {
-			System.out.println("enter into try");
 			object.pst = object.con.prepareStatement(select);
 			object.pst.setString(1, username);
 			object.pst.setString(2, password);
 			object.res = object.pst.executeQuery();
-			System.out.println("res1" + object.res);
+
 			if (object.res.next()) {
-				//session = req.getSession(true);
 				int serialNum = object.res.getInt(1);
 				String fullName = object.res.getString(2);
 				long mobile = object.res.getLong(3);
@@ -57,8 +56,11 @@ public class LogInServlet extends HttpServlet {
 				session.setAttribute("fullName", fullName);
 				session.setAttribute("mobile", mobile);
 				session.setAttribute("username", username);
+				
+				//System.out.println("activeUsers : " + activeUser);
+				
 				resp.sendRedirect("SuccessFullLogIn");
-				System.out.println("after dispature servlet");
+		
 			} else {
 				System.out.println("Not Valid user");
 				resp.sendRedirect("UnsuccessfulLogIn");
