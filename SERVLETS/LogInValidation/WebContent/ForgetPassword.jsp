@@ -12,8 +12,8 @@
 			<legend>
 				<h3 style="color: yellow;">Forget Password</h3>
 			</legend>
-			<h3>Get A Verification Code</h3>
-			<h5>Our Application will send a verification code to you email</h5>
+			<h3>Get A Password On your Mail</h3>
+			<h5>Our Application will send a password to you email</h5>
 			<h3>
 				Enter Email : <input type="email" name="email" required placeholder="abc@mail.com">
 				<input type="submit" value="Send"/>

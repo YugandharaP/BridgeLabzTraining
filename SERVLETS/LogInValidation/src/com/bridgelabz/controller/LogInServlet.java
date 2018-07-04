@@ -29,7 +29,7 @@ public class LogInServlet extends HttpServlet {
 
 		ServletContext context = req.getServletContext();
 		MyHttpSessionListener.totalUserVisited++;
-		context.setAttribute("totalUserVisited", +MyHttpSessionListener.totalUserVisited);
+		context.setAttribute("totalUserVisited", MyHttpSessionListener.totalUserVisited);
 
 		HttpSession session = session = req.getSession(true);
 		session.setMaxInactiveInterval(60);

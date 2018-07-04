@@ -10,17 +10,6 @@
 	<h3>${message}</h3>
 </body>
 </html>
-<%--
-			Cookie ck[] = request.getCookies();
-			String message = null;
-			for (Cookie cookie : ck) {
-				if (cookie.getName().equals("message")) {
-					message = cookie.getValue();
-				}
-			}
-		%>
-		<%= message %> --%>
-
 <%
 	request.getRequestDispatcher("SignUp.jsp").include(request, response);
 %>
