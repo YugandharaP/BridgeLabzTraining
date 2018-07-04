@@ -7,7 +7,7 @@
 <title>FilterSignUpFailed</title>
 </head>
 <body bgcolor="aqua">
-	<h3><${message}></h3>
+	<h3>${message}</h3>
 </body>
 </html>
 <%--

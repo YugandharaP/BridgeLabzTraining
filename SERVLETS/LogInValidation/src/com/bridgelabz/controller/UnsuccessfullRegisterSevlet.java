@@ -13,14 +13,14 @@ public class UnsuccessfullRegisterSevlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("FilterSignUpFailed");
 		RequestDispatcher dispature = req.getRequestDispatcher("FilterSignUpFailed.jsp");
 		dispature.forward(req, resp);
 	}
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doGet(req, resp);
-		//req.getRequestDispatcher("SignUp.jsp").include(req, resp);
+		// req.getRequestDispatcher("SignUp.jsp").include(req, resp);
 	}
 
 }

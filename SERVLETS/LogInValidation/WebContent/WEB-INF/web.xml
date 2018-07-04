@@ -77,6 +77,16 @@
 	</servlet>
 
 	<servlet-mapping>
+		<servlet-name>PasswordNotMatched</servlet-name>
+		<url-pattern>/passwordNotMatched</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PasswordNotMatched</servlet-name>
+		<servlet-class>com.bridgelabz.controller.UnsuccessfullRegisterSevlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
 		<servlet-name>LogOutSuccessServlet</servlet-name>
 		<url-pattern>/LogoutSuccess</url-pattern>
 	</servlet-mapping>

@@ -52,6 +52,7 @@ public class SignUpServlet extends HttpServlet {
 			}
 		} else {
 			System.out.println("Password Not Matched!");
+			resp.sendRedirect("passwordNotMatched");
 		}
 
 	}
