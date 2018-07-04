@@ -30,7 +30,7 @@ public class LogInServlet extends HttpServlet {
 		ServletContext context = req.getServletContext();
 		MyHttpSessionListener.totalUserVisited++;
 		context.setAttribute("totalUserVisited", +MyHttpSessionListener.totalUserVisited);
-		
+
 		HttpSession session = session = req.getSession(true);
 		session.setMaxInactiveInterval(60);
 		String username = req.getParameter("username");
@@ -56,11 +56,11 @@ public class LogInServlet extends HttpServlet {
 				session.setAttribute("fullName", fullName);
 				session.setAttribute("mobile", mobile);
 				session.setAttribute("username", username);
-				
-				//System.out.println("activeUsers : " + activeUser);
-				
+
+				// System.out.println("activeUsers : " + activeUser);
+
 				resp.sendRedirect("SuccessFullLogIn");
-		
+
 			} else {
 				System.out.println("Not Valid user");
 				resp.sendRedirect("UnsuccessfulLogIn");

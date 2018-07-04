@@ -17,7 +17,7 @@ public class SignUpServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		HttpSession session = session = req.getSession(true);
+		HttpSession session =req.getSession(true);
 		session.setMaxInactiveInterval(60);
 		UserBean bean = new UserBean();
 		String fname = req.getParameter("fname");

@@ -122,10 +122,39 @@
 		<servlet-name>UnsuccessFullRegisterServlet</servlet-name>
 		<servlet-class>com.bridgelabz.controller.UnsuccessfullRegisterSevlet</servlet-class>
 	</servlet>
-	
+
 	<listener>
- <description>Session Listener Example</description>
- <listener-class>com.bridgelabz.listener.MyHttpSessionListener</listener-class>
-</listener>
+		<description>Session Listener Example</description>
+		<listener-class>com.bridgelabz.listener.MyHttpSessionListener</listener-class>
+	</listener>
+
+	<servlet-mapping>
+		<servlet-name>ForgetPasswordServlet</servlet-name>
+		<url-pattern>/forgetpassword</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ForgetPasswordServlet</servlet-name>
+		<servlet-class>com.bridgelabz.controller.PreForgetPasswordServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SendMailServlet</servlet-name>
+		<url-pattern>/sendEmail</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SendMailServlet</servlet-name>
+		<servlet-class>com.bridgelabz.controller.MailAppServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SignInAfterMailServlet</servlet-name>
+		<url-pattern>/sendMail</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>SignInAfterMailServlet</servlet-name>
+		<servlet-class>com.bridgelabz.controller.PreLogInServlet</servlet-class>
+	</servlet>
+
 
 </web-app>

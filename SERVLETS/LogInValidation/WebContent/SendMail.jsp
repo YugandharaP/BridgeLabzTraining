@@ -4,24 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>HomePage</title>
+<title>Send Mail</title>
 </head>
 <body bgcolor="aqua">
-	<center>
-		<h1>Welcome To BridgeLabz</h1>
+	<div style="background-color: pink">
 		<fieldset>
-			<legend>HomePage </legend>
-			<h4>
-				<form action="LogIn" method="post">
-					<input type="submit" value="signIn" />
-				</form>
-				&nbsp;
-				<form action="signUp" method="post">
-					<input type="submit" value="SignUp" />
-				</form>
-			</h4>
+			<legend>
+				<h3 style="color: yellow;">${sendMessage}</h3>
+			</legend>
+			 <form action="sendMail" method="post"><input type="submit" value="SigIn" /></form>
 		</fieldset>
-	</center>
-	</form>
+	</div>
+
+
 </body>
 </html>

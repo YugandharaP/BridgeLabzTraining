@@ -8,11 +8,12 @@
 </head>
 <body bgcolor="lightblue">
 	<div style="background-color: pink">
-		<form action="signin" method="post">
-			<fieldset>
-				<legend>
-					<h3 style="color: yellow;">SignIn</h3>
-				</legend>
+
+		<fieldset>
+			<legend>
+				<h3 style="color: yellow;">SignIn</h3>
+			</legend>
+			<form action="signin" method="post">
 				UserName : <input type="email" name="username">&nbsp;&nbsp;
 				Password : <input type="password" name="password"
 					pattern="((?=.*\d)(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[@#$%^&*()!]).{6,20})"
@@ -20,11 +21,13 @@
 				<h4>
 					<input type="submit" value="signIn" />&nbsp;
 				</h4>
+			</form>
+			<form action="forgetpassword" method="post">
 				<h4>
-					<a href="ForgetPassword.html">Forget password</a>
+					<input type="submit" value="Forget Password" />
 				</h4>
-			</fieldset>
-		</form>
+		</fieldset>
+
 	</div>
 </body>
 </html>
